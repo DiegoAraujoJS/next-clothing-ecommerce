@@ -2,6 +2,9 @@
 const nextConfig = {
   experimental: {
     instrumentationHook: true
+  },
+  images: {
+    domains: ['res.cloudinary.com', 'fullyfilmy.in']
   }
 };
 

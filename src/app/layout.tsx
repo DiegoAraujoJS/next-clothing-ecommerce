@@ -22,18 +22,18 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="">
-          <nav className="flex bg-slate-200 gap-10 px-8">
+          <nav className="flex bg-slate-200 gap-10 px-8 py-2">
             <Link href="/">
               Home
-            </Link>
-            <Link href="/create-product">
-              Create Product
             </Link>
             {result.map(({name}) => (
               <Link key={name} href={`/?category=${name}`}>
                 {name}
               </Link>
             ))}
+            <Link href="/create-product" className="right-0 absolute">
+              Create Product
+            </Link>
           </nav>
           <div className="p-8">
           {children}
